@@ -1,0 +1,12 @@
+name: "Issue Escalator"
+description: "Looks for /escalate in an issue comment and will create an issue in another repository identified by a label on the issue"
+inputs:
+  issue-comment:
+    description: "The comment object"
+    required: true
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.issue-comment }}
