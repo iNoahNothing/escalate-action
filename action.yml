@@ -10,3 +10,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.issue-comment }}
+    - ${{ inputs.access-token }}
